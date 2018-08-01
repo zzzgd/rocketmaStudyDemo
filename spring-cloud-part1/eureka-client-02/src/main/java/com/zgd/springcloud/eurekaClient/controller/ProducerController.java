@@ -15,7 +15,7 @@ public class ProducerController {
     @Value("${server.port}")
     String port;
 
-    @RequestMapping("/clientHello")
+    @RequestMapping("/hello")
     public String hello(@RequestParam String name){
         return "hi "+name+",i am from port:" + port;
     }

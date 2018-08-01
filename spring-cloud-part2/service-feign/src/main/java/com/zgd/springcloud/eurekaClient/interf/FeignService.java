@@ -21,6 +21,6 @@ public interface FeignService{
      * @param name
      * @return
      */
-    @RequestMapping(value = "/clientHello",method = RequestMethod.GET)
+    @RequestMapping(value = "/hello",method = RequestMethod.GET)
     String hiService(@RequestParam(value = "name") String name);
 }
