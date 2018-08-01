@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @FeignClient value是指定的服务提供者在eurekaServer中的服务名,eureka-client-01的applicationName就是client01
  */
 @FeignClient(value = "client01",fallback = FeignServiceImpl.class)
-@Component
 public interface FeignService{
 
     /**
@@ -21,6 +20,6 @@ public interface FeignService{
      * @param name
      * @return
      */
-    @RequestMapping(value = "/client1/hello",method = RequestMethod.GET)
+    @RequestMapping(value = "/hello",method = RequestMethod.GET)
     String hiService(@RequestParam(value = "name") String name);
 }

@@ -36,13 +36,11 @@ public class HelloService {
     public String hiService(String name) {
         //eureka-client-01工程的applicationName
         String client01Name = "client01";
-        //eureka-client-01工程的ProducerController的路由
-        String prefix1 = "client1";
         //eureka-client-01工程的ProducerController的hello方法的路由
-        String prefix2 = "hello";
+        String prefix = "hello";
 
         //访问eureka-client-01的路由,远程调用eureka-client-01的方法
-        return restTemplate.getForObject("http://" + client01Name + "/" + prefix1 + "/" + prefix2 + "?name=" + name, String.class);
+        return restTemplate.getForObject("http://" + client01Name + "/" + prefix + "?name=" + name, String.class);
     }
 
 

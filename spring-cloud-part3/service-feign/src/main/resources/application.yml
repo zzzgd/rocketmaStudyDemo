@@ -8,6 +8,8 @@ spring:
 server:
   port: 8086
 
+
 feign:
   hystrix:
+    # 开启熔断
     enabled: true
